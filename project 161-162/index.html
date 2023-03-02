@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shooting Game in Virtual Reality</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>   
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="throw.js"></script>
+    
+    
+  </head>
+  <body>
+    <a-scene id="scene">
+
+      <!--Assets-->
+      <a-assets>
+        <a-asset-item
+        id="ball"
+        src="./bowling_ball/scene.gltf"></a-asset-item>
+      </a-assets>
+
+      <a-asset-item 
+      id="pin"
+      src="./bowling_pin/scene.gltf">
+       
+      </a-asset-item>
+      
+      <!--Light-->
+      <a-entity light="type: ambient; color: yellow; intensity:0.5"></a-entity>
+
+      <!--Camera and Cursor-->
+      <a-entity
+        id="camera"
+        camera
+        position="0 1.6 0"
+        wasd-controls
+        look-controls="pointerLockEnabled: false"        
+      >
+    
+      
+        <a-cursor></a-cursor>        
+      </a-entity>
+
+  
+      <a-pin position="-2 1.5 -10" color="black" depth="1" height="1" width="1"></a-pin>
+      <a-pin position="0 1.5 -10" color="black" depth="1" height="1" width="1"></a-pin>
+      <a-pin position="2 1.5 -10" color="black" depth="1" height="1" width="1"></a-pin>
+      <a-pin position="-1 2.5 -10" color="black" depth="1" height="1" width="1"></a-pin>
+      <a-pin position="1 2.5 -10" color="black" depth="1" height="1" width="1"></a-pin>
+      <a-pin position="0 3.5 -10" color="black" depth="1" height="1" width="1"></a-pin>
+    </a-scene>
+  </body>
+</html>
